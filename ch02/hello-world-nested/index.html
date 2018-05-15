@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/javascript">
+      let h1 = React.createElement('h1', null, 'Hello world!')
+      ReactDOM.render(
+        React.createElement('div', null, h1, h1),
+        document.getElementById('content')
+      )
+    </script>
+  </body>
+</html>

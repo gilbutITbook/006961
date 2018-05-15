@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3의 변경사항 - 기존의 Context API</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.1/prop-types.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      이 문서는 React 16.3의 변경사항을 간단히 알아보기 위해서
+      React 팀이 제공하는 Minimal HTML Template을 바탕으로 작성되었습니다.
+
+      https://reactjs.org/docs/try-react.html#minimal-html-template
+    -->
+    <script type="text/babel">
+      class Button extends React.Component {
+        render() {
+          return (
+            <button style={{background: this.context.color}}>
+              {this.props.children}
+            </button>
+          );
+        }
+      }
+
+      Button.contextTypes = {
+        color: PropTypes.string
+      };
+
+      class Message extends React.Component {
+        render() {
+          return (
+            <div>
+              {this.props.text} <Button>Delete</Button>
+            </div>
+          );
+        }
+      }
+
+      class MessageList extends React.Component {
+        getChildContext() {
+          return {color: 'purple'};
+        }
+
+        render() {
+          const children = this.props.messages.map((message) =>
+            <Message key={message.id} text={message.text} />
+          );
+          return <div>{children}</div>;
+        }
+      }
+
+      MessageList.childContextTypes = {
+        color: PropTypes.string
+      };
+
+      ReactDOM.render(
+        <MessageList messages={[
+          { id: 0, text: '메시지1' },
+          { id: 1, text: '메시지2' }
+        ]} />,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>

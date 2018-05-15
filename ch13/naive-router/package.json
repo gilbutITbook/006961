@@ -1,0 +1,27 @@
+{
+  "name": "naive-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack -w"
+  },
+  "author": "Azat Mardan",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "6.18.2",
+    "babel-loader": "6.4.1",
+    "babel-preset-react": "6.5.0",
+    "webpack": "2.4.1",
+    "react": "15.5.4",
+    "react-dom": "15.5.4"
+  },
+  "dependencies": {
+  }
+}
