@@ -1,6 +1,9 @@
-# React Quickly Source Code
+# <리액트 교과서> (React Quickly) 예제 코드
 
-Source code for *React Quickly: Painless Web Apps with React, JSX, Redux, and GraphQL 📕* [Manning, 2017]. More information at
-the [website](http://reactquickly.co) or [Manning Publications](https://www.manning.com/books/react-quickly?a_aid=a&a_bid=5064a2d3).
+책은 예제 코드의 일부를 옮겨가며 설명하고 있으므로 예제 코드의 원본을 살펴보며 공부하는 것을 권장합니다.
+1장부터 20장까지 각각 ch01부터 ch20 폴더에 분리되어 있으며, 19장에서는 16장의 예제를 다시 사용하므로 ch19 폴더는 없습니다.
 
-Available NOW in major book stores and at [Manning](https://www.manning.com/books/react-quickly?a_aid=a&a_bid=5064a2d3).
+## React Router 버전 4
+이 책의 원서는 React Router 버전 2를 기준으로 설명하지만, 이 책을 번역하는 시점(2018년 4월)에서 React Router의 최신 버전은 버전 4.2.2로 다소 차이가 있습니다. 이 책에서 설명한 내용과 달라진 부분이 있어 18장 예제를 바탕으로 최신 버전의 변경 사항을 반영하여 부록으로 추가했습니다. 예제 코드는 ch18/nile-updated 폴더에서 확인할 수 있습니다.
+
+
